@@ -18,7 +18,9 @@ android {
         }
     }
 
-    //TODO 1: Enable Data Binding
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {

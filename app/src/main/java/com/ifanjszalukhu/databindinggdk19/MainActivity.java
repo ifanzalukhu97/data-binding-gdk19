@@ -3,8 +3,9 @@ package com.ifanjszalukhu.databindinggdk19;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
-//TODO 5: Rebuild Project
+import com.ifanjszalukhu.databindinggdk19.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //TODO 6: Change inflation
-        setContentView(R.layout.activity_main);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        //TODO 7: set variable values data binding
+        binding.setTitle("Raja Singa (2019)");
+        binding.setOverview("Simba mengidolakan ayahnya, Raja Mufasa, dan mengambil hati takdir kerajaannya sendiri. Tetapi tidak semua orang di kerajaan itu merayakan kedatangan anaknya yang baru.");
     }
 }
