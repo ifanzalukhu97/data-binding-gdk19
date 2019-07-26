@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <!--TODO 3: Add movie variable-->
+        <variable
+            name="movie"
+            type="com.ifanjszalukhu.databindinggdk19.Movie" />
     </data>
-
-    <!--TODO 6: Add layout expressions-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:id="@+id/img_poster_movie"
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:src="@{movie.poster}"
             app:layout_constraintEnd_toEndOf="@id/txt_title_movie"
             app:layout_constraintStart_toStartOf="@id/txt_title_movie"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -27,6 +28,7 @@
             android:id="@+id/txt_title_movie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="@{movie.title}"
             android:layout_marginStart="@dimen/normal_spacing"
             android:layout_marginTop="@dimen/normal_spacing"
             android:layout_marginEnd="@dimen/normal_spacing"
@@ -38,6 +40,7 @@
             android:id="@+id/txt_overview_movie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="@{movie.overview}"
             android:layout_marginTop="@dimen/normal_spacing"
             app:layout_constraintEnd_toEndOf="@id/txt_title_movie"
             app:layout_constraintStart_toStartOf="@id/txt_title_movie"
