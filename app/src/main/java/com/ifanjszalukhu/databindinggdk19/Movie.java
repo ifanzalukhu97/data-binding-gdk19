@@ -1,15 +1,24 @@
 package com.ifanjszalukhu.databindinggdk19;
 
-//TODO 5: Add favorite variable
 public class Movie {
     private String title;
     private String overview;
     private String poster;
+    private Boolean isFavorite;
 
-    public Movie(String title, String overview, String poster) {
+    public Movie(String title, String overview, String poster, Boolean isFavorite) {
         this.title = title;
         this.overview = overview;
         this.poster = poster;
+        this.isFavorite = isFavorite;
+    }
+
+    public Boolean getIsFavorite() {
+        return isFavorite;
+    }
+
+    public void setIsFavorite(Boolean isFavorite) {
+        isFavorite = isFavorite;
     }
 
     public String getTitle() {

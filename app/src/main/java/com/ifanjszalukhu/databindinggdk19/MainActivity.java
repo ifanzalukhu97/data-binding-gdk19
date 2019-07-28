@@ -15,11 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        //TODO 6: set favorite value in current movie
         Movie currentMovie = new Movie(
                 "Raja Singa (2019)",
                 "Simba mengidolakan ayahnya, Raja Mufasa, dan mengambil hati takdir kerajaannya sendiri. Tetapi tidak semua orang di kerajaan itu merayakan kedatangan anaknya yang baru.",
-                "https://image.tmdb.org/t/p/w533_and_h300_bestv2/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg"
+                "https://image.tmdb.org/t/p/w533_and_h300_bestv2/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
+                true
         );
 
         binding.setMovie(currentMovie);
