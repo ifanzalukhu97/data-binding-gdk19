@@ -1,5 +1,6 @@
 package com.ifanjszalukhu.databindinggdk19;
 
+//TODO 5: Add favorite variable
 public class Movie {
     private String title;
     private String overview;
