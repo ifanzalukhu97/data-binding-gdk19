@@ -9,8 +9,6 @@ import com.ifanjszalukhu.databindinggdk19.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO 5: Rebuild Project
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
                 true
         );
 
-        // TODO 6: set clickListener binding variable with ClickListeners instance
+        ClickListeners clickListeners = new ClickListeners(this);
 
         binding.setMovie(currentMovie);
+        binding.setClickListener(clickListeners);
     }
 }

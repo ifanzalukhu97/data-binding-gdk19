@@ -1,8 +1,17 @@
 package com.ifanjszalukhu.databindinggdk19;
 
-// TODO 2: Create ClickListeners Class
-public class ClickListeners {
+import android.content.Context;
+import android.widget.Toast;
 
-    // TODO 3: Create showMovie method
+public class ClickListeners {
+    private Context context;
+
+    ClickListeners(Context context) {
+        this.context = context;
+    }
+
     // that accept movieTitle string arguments
+    public void showMovie(String movieTitle) {
+        Toast.makeText(context, movieTitle, Toast.LENGTH_LONG).show();
+    }
 }

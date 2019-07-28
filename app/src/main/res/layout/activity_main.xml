@@ -9,7 +9,9 @@
             name="movie"
             type="com.ifanjszalukhu.databindinggdk19.Movie" />
 
-        <!--TODO 4: add clickListener binding variable-->
+        <variable
+            name="clickListener"
+            type="com.ifanjszalukhu.databindinggdk19.ClickListeners" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,7 +61,17 @@
             app:layout_constraintTop_toBottomOf="@id/img_poster_movie"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!--TODO 1: Create Show Movie Button-->
         <!--TODO 7: add click button layout expression-->
+        <Button
+            android:id="@+id/btn_show_movie"
+            android:layout_margin="@dimen/normal_spacing"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> clickListener.showMovie(movie.title)}"
+            android:text="Show Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
